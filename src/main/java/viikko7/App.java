@@ -62,11 +62,12 @@ public class App
                         if (book.title.equals(borrowTitle) && book instanceof FictionBook) {
                             ((FictionBook) book).borrow();
                             found = true;
+                            System.out.println("Kirja " + book.title + " on nyt lainattu.");
                             break;
                         }
                     }
                     if (!found) {
-                        System.out.println("Kirjaa ei löytynyt tai se ei ole fiktiokirja.");
+                        System.out.println("Kirjaa ei löytynyt tai sitä ei voi lainata.");
                     }
                     break;
                 case 4:

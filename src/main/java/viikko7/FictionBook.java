@@ -32,7 +32,7 @@ public class FictionBook extends Book implements Borrowable {
         this.borrowedCopies--;
         if (this.borrowedCopies < 0) {
             this.borrowedCopies = 0; 
-            System.out.println("Kirja " + this.title + " ei ole lainassa");
+            System.out.println("Kirja " + this.title + " ei ole lainassa.");
 
         }
         else {
