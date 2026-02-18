@@ -22,7 +22,7 @@ public class Library {
             System.out.println("Kirjan kategoria: " + book.categorize());
             määrä += book.copies;
         }
-        System.out.println("Kirjojen määrä kirjastossa: " + määrä);
+        System.out.println("Kirjojen määrä kirjastossa on: " + määrä);
 
     }
 }

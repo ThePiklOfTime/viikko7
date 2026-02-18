@@ -25,7 +25,7 @@ public class App
                 
             switch (i) {
                 case 1:
-                    System.out.println("Minkä kirjan haluat lisätä kirjastoon? 1) Fiktiokirja 2) Tietokirja");
+                    System.out.println("Minkä kirjan haluat lisätä kirjastoon? 1) Fiktiokirja, 2) Tietokirja");
                     int bookType = Integer.parseInt(scanner.nextLine());
                     System.out.println("Anna kirjan nimi:");
                     String title = scanner.nextLine();
