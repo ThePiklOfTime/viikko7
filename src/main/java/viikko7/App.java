@@ -62,7 +62,6 @@ public class App
                         if (book.title.equals(borrowTitle) && book instanceof FictionBook) {
                             ((FictionBook) book).borrow();
                             found = true;
-                            System.out.println("Kirja " + book.title + " on nyt lainattu.");
                             break;
                         }
                     }
@@ -78,7 +77,6 @@ public class App
                         if (book.title.equals(returnTitle) && book instanceof FictionBook) {
                             ((FictionBook) book).returnBook();
                             foundReturn = true;
-                            System.out.println("Kirja " + book.title + "  on palautettu.");
                             break;
                             
                         }
