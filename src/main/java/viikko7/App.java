@@ -77,7 +77,9 @@ public class App
                         if (book.title.equals(returnTitle) && book instanceof FictionBook) {
                             ((FictionBook) book).returnBook();
                             foundReturn = true;
+                            System.out.println("Kirja " + book.title + "  on palautettu.");
                             break;
+                            
                         }
                     }
                     if (!foundReturn) {
