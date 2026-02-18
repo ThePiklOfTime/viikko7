@@ -25,7 +25,7 @@ public class App
                 
             switch (i) {
                 case 1:
-                    System.out.println("Minkä tyyppinen kirja? 1) Fiktiokirja 2) Tietokirja");
+                    System.out.println("Minkä kirjan haluat lisätä kirjastoon? 1) Fiktiokirja 2) Tietokirja");
                     int bookType = Integer.parseInt(scanner.nextLine());
                     System.out.println("Anna kirjan nimi:");
                     String title = scanner.nextLine();
@@ -36,6 +36,10 @@ public class App
                     System.out.println("Anna kirjojen määrä:");
                     int copies = Integer.parseInt(scanner.nextLine());
                     
+                    if (bookType == 1 || bookType == 2) {
+                        System.out.println("Kirja lisätty kirjastoon!");
+                    }
+
                     if (bookType == 1) {
                         library.addBook(new FictionBook(title, author, pages, copies));
                     } else if (bookType == 2) {

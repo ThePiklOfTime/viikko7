@@ -16,9 +16,13 @@ public class Library {
             System.out.println("Ei lisättyjä kirjoja.");
             return;
         }
+        int määrä = 0;
         for (Book book : books) {
             book.displayInfo();
             System.out.println("Kirjan kategoria: " + book.categorize());
+            määrä += book.copies;
         }
+        System.out.println("Kirjojen määrä kirjastossa: " + määrä);
+
     }
 }
