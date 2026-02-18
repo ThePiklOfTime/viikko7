@@ -46,7 +46,7 @@ public class App
                         library.addBook(new NonFictionBook(title, author, pages, copies));
                     }
                     else {
-                        System.out.println("Väärä syöte, kirja ei lisätty.");
+                        System.out.println("Virheellinen kirjatyyppi.");
                     }
                     
                     break;
@@ -55,10 +55,34 @@ public class App
                     
                     break;
                 case 3:
-                    
+                    System.out.println("Anna lainattavan kirjan nimi:");
+                    String borrowTitle = scanner.nextLine();
+                    boolean found = false;
+                    for (Book book : library.getBooks()) {
+                        if (book.title.equals(borrowTitle) && book instanceof FictionBook) {
+                            ((FictionBook) book).borrow();
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (!found) {
+                        System.out.println("Kirjaa ei löytynyt tai se ei ole fiktiokirja.");
+                    }
                     break;
                 case 4:
-                    
+                    System.out.println("Anna palautettavan kirjan nimi:");
+                    String returnTitle = scanner.nextLine();
+                    boolean foundReturn = false;
+                    for (Book book : library.getBooks()) {
+                        if (book.title.equals(returnTitle) && book instanceof FictionBook) {
+                            ((FictionBook) book).returnBook();
+                            foundReturn = true;
+                            break;
+                        }
+                    }
+                    if (!foundReturn) {
+                        System.out.println("Kirjaa ei löytynyt tai sitä ei voi palauttaa.");
+                    }
                     break;
                 case 0:
                     exit = true;
